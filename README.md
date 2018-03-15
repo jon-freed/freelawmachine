@@ -95,11 +95,15 @@ opinions!
 You can inspect the Solr index cores directly using your browser:
 [http://localhost:8999/solr/#/](http://localhost:8999/solr/#/)
 
-# Modifying your local CourtListener website and contributing back to its repository
+## Modifying your local CourtListener website and contributing back to its repository
 
-Your local CourtListener   now have a working local instance of the CourtListener website.  You also have a  well as a local copy of the 
-Now that you have a working local instance of the CourtListener website, you also 
+You should not have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute you changes back to its repository:
 
+1.  On GitHub, fork the freelawproject/courtlistener repository into your own account.
+2.  Initiate git for your local CourtListener folder, and set its remote to be equal to your fork.  (You may want to do a branch.)
+3.  Modify your local CourtListener instance.
+4.  Push your changes up to your fork on GitHub.
+5.  Submit a pull request to the main freelawproject/courtlistener repository.
 
 ## Working with and contributing to the FreeLawMachine repository
 
