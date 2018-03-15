@@ -59,9 +59,7 @@ From within the `/var/www/courtlistener` directory, simply use the [Django](http
 _For more details on why this is, check out this StackOverflow
 [post](http://stackoverflow.com/questions/1621457/about-ip-0-0-0-0-in-django)._
 
-Fire up your browser (on your local machine!) and confirm you've got a local instance that looks like [courtlistener.com](https://www.courtlistener.com/).
-
-  Navigate to: [http://localhost:8000](http://localhost:8000)
+Fire up your browser (on your local machine!), navigate to: [http://localhost:8000](http://localhost:8000), and confirm you've got a local instance that looks like [courtlistener.com](https://www.courtlistener.com/).
 
 ## Step 4:  Scrape some court opinions!
 
