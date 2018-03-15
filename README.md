@@ -84,13 +84,15 @@ Vagrantfile.
 
   `vagrant ssh`
 
+For the password, enter 'vagrant'.
+
 6. If you haven't used the machine yet, you'll need to do some basic
 CourtListener provisioning steps that currently aren't handled (yet) by our
 Vagrant provisioning scripts.
 
   ``` bash
   cd /var/www/courtlistener
-  pip install -U requirements.txt
+  pip install -U -r requirements.txt
   ./manage.py migrate
   ./manage.py syncdb #to create the admin user
   ```
