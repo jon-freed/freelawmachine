@@ -5,7 +5,7 @@ Want to help develop Free Law Project functionality?
 
 Use this repository and the steps below to build your own virtual machine and ready-to-run development environment for the [Free Law Project](https://github.com/freelawproject), and the [CourtListener repository](https://github.com/freelawprojectcourtlistener) and website app in particular.  You will also be able to build new or custom Vagrant boxes and contribute back to this freelawmachine repository.
 
-This repository and the steps supercede the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener wiki.  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
+This repository and the steps supercede the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener [wiki])https://github.com/freelawproject/courtlistener/wiki).  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
 
 ## Step 1:  Install prerequisites
 
@@ -21,10 +21,9 @@ Install the following.  Use a high-speed connection.  (These components are larg
 
 1. Make sure you have the base requirements of *Vagrant* and *VirtualBox* installed and up to date.
 
-2. Either clone this project using git or download a copy of the [Vagrantfile](Vagrantfile) and put it wherever you want to have CourtListener available.
+2. Either download a copy of the [Vagrantfile](Vagrantfile) file into a local directory or, if you want to contribute back to this freelawmachine repository, fork it within GitHub to your GitHub account, create a branch, and use git or GitHub Desktop to clone that branch to a local directory.
 
-3. Open a terminal or command line and change to the directory with the
-Vagrantfile.
+3. Open a terminal or command line and change to that directory (which now contains the 'Vagrantfile' file).
 
   `cd <directory>`
 
@@ -32,13 +31,13 @@ Vagrantfile.
 
   `vagrant up`
 
-  And the base box will be pulled down from it's hosted location, installed into VirtualBox, started, and last-mile provisioning steps will take place.  _This now includes cloning the latest copy of CourtListener for you!_
+   And the base box will be pulled down from it's hosted location, installed into VirtualBox, started, and last-mile provisioning steps will take place.  _This now includes cloning the latest copy of CourtListener for you!_
 
 5. Now to log into the box...it's a simple:
 
   `vagrant ssh`
 
-For the password, enter 'vagrant'.
+  For the password, enter 'vagrant'.
 
 6. If you haven't used the machine yet, you'll need to do some basic CourtListener provisioning steps that currently aren't handled (yet) by our Vagrant provisioning scripts.
 
@@ -66,10 +65,7 @@ Fire up your browser (on your local machine!) and confirm you've got a local ins
 
 ## Step 4:  Scrape some court opinions!
 
-You can easily load some content into your CourtListener instance by scraping
-some courts using the [Juriscraper](https://github.com/freelawproject/juriscraper/)
-commands built into CourtListener. In either a new SSH session/shell or after
-cancelling (`ctrl-c`) the "runserver" command, try:
+You can easily load some opinions into your CourtListener instance by scraping some courts using the [Juriscraper](https://github.com/freelawproject/juriscraper/) commands built into CourtListener. In either a new SSH session/shell or after cancelling (`ctrl-c`) the "runserver" command, try:
 
 ```bash
 ./manage.py cl_scrape_opinions \
