@@ -118,7 +118,7 @@ You should now have a working local instance of the CourtListener website.  You 
 2.  [Create a branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/) for the work you want to do.
 3.  Use your computer's installation of git (or a git client, e.g. GitHub Desktop) to clone your GitHub <username>/courtlistener repository down into your local CourtListener folder (that was created by the vagrant/virtual-box instructions above), and then, locally, select your new branch as the active branch.
 3.  Modify your local CourtListener instance.  Use your computer's git or git client to commit your changes as often as desired to your local repository.
-4.  Periodically push your changes up to your fork and branch on GitHub.  (In essence, this backs up your local hard work to your storage space in your GitHub account.)
+4.  Periodically push your changes up to your fork and branch on GitHub.  (In essence, this backs up your local work to your storage space in your GitHub account.)
 5.  When you are done with your branch and you have tested your changes, then on GitHub submit a pull request up to your <username>/courtlistener repository's master branch.
 6.  On GitHub, accept that pull request within your master branch while squashing all your branch's commits into one.
 7.  Submit a pull request to the main freelawproject/courtlistener repository.
