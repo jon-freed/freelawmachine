@@ -122,7 +122,7 @@ You should now have a working local instance of the CourtListener website.  You 
 5.  When you are done with your branch and you have tested your changes, then on GitHub submit a pull request up to your <username>/courtlistener repository's master branch.
 6.  On GitHub, accept that pull request within your master branch while squashing all your branch's commits into one.
 7.  Submit a pull request to the main freelawproject/courtlistener repository.
-8.  Patiently wait for your pull request to be reviewed, and patiently work with any requests for changes to what you have proposed.  Please be aware that your pull request may be rejected as a normal part of that process of reviewing and revising your proposed change.  Ultimately, please be aware that proposed changes that do not align with the Free Law Project's current vision, direction, and capabilities may not be accepted, but if this happens, you are certainly free to continue developing within your fork.)
+8.  Patiently wait for your pull request to be reviewed, and patiently work with any requests for changes to what you have proposed.  Please be aware that your pull request may be rejected as a normal part of that process of reviewing and revising your proposed change.  Ultimately, please be aware that proposed changes that do not align with the Free Law Project's current vision, direction, and capabilities may not be accepted, but if this happens, you are certainly free to continue developing within your fork.
 
 ## Working with and contributing to the FreeLawMachine repository
 
