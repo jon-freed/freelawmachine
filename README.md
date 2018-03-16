@@ -84,7 +84,7 @@ You can easily load some opinions into your CourtListener instance by scraping s
 
 CourtListener will spin up a Juriscraper instance for the given court and load the result items into the PostgreSQL instance as well as feed the items to the Solr instance. (If you don't get any items with "ca1", then try another like "ca6".)
 
-Once complete (after a timeout) or after you manually kill it with some `ctrl-c`'s, then you need to tell Solr to commit changes and make the new docs in the index go live:
+Once complete after a successful crawl or a timeout or after you manually kill the Juriscraper instance with some `ctrl-c`'s, then you need to tell Solr to commit changes and make the new docs in the index go live:
 
 ```sh
 ./manage.py cl_update_index --do-commit --type opinions \
