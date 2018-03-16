@@ -13,8 +13,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
 
 * [Vagrant 1.8.5 or greater](https://www.vagrantup.com)
 * [Virtualbox 5.1.4 or greater](https://www.virtualbox.org/)
-* (Optional) [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* (Optional) OR [GitHub Desktop](https://desktop.github.com)
+* (Optional) [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) OR [GitHub Desktop](https://desktop.github.com)
 * (Optional) [Packer 0.10.1](https://packer.io/downloads.html) (if you want to contribute to this freelawmachine repository)
 
 ## Step 2:  Install CourtListener
