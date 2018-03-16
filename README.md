@@ -48,7 +48,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
   ./manage.py changepassword admin  #to set the password for the Django admin user
   ```
 
-7. Run the following commands in the terminal to get the latest schema file information for solr:
+7. Run the following commands in the terminal to get the latest recap schema file information for solr:
 
 ``` bash
 cd /opt/solr-cores/recap/conf
@@ -104,28 +104,16 @@ opinions!
 You can inspect the Solr index cores directly using your browser:
 [http://localhost:8983/solr/#/](http://localhost:8983/solr/#/)
 
-## Using your browser's RECAP extension with your local CourtListener website
-
-To use your own browser's RECAP extension with your local CL site:
-
-1. Use the above `runserver` command to start the site.
-
-2. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the "admin" user.
-
-3. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000");`.)
-
-4.  Go to a PACER docket page and your RECAP extension will add its content to your local CourtListener website.
-
 ## Modifying your local CourtListener website and contributing back to its repository
 
 You should now have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute your changes back to its repository, follow the [GitHub Flow](https://guides.github.com/introduction/flow/):
 
 1.  Use the [freelawproject/courtlistener](https://github.com/freelawproject/courtlistener) repository page's "fork" button to fork the repository into your own GitHub account.
 2.  [Create a branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/) for the work you want to do.
-3.  Use your computer's installation of git (or a git client, e.g. GitHub Desktop) to clone your GitHub <username>/courtlistener repository down into your local CourtListener folder (that was created by the vagrant/virtual-box instructions above), and then, locally, select your new branch as the active branch.
+3.  Use your computer's installation of git (or a git client, e.g. GitHub Desktop) to clone your GitHub &lt;username&gt;/courtlistener repository down into your local CourtListener folder (that was created by the vagrant/virtual-box instructions above), and then, locally, select your new branch as the active branch.
 3.  Modify your local CourtListener instance.  Use your computer's git or git client to commit your changes as often as desired to your local repository.
 4.  Periodically push your changes up to your fork and branch on GitHub.  (In essence, this backs up your local work to your storage space in your GitHub account.)
-5.  When you are done with your branch and you have tested your changes, then on GitHub submit a pull request up to your <username>/courtlistener repository's master branch.
+5.  When you are done with your branch and you have tested your changes, then on GitHub submit a pull request up to your &lt;username&gt;/courtlistener repository's master branch.
 6.  On GitHub, accept that pull request within your master branch while squashing all your branch's commits into one.
 7.  Submit a pull request to the main freelawproject/courtlistener repository.
 8.  Patiently wait for your pull request to be reviewed, and patiently work with any requests for changes to what you have proposed.  Please be aware that your pull request may be rejected as a normal part of that process of reviewing and revising your proposed change.  Ultimately, please be aware that proposed changes that do not align with the Free Law Project's current vision, direction, and capabilities may not be accepted, but if this happens, you are certainly free to continue developing within your fork.
