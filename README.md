@@ -5,7 +5,7 @@ Want to help develop Free Law Project functionality?
 
 Use this repository and the steps below to build your own virtual machine and ready-to-run development environment for the [Free Law Project](https://github.com/freelawproject), and the [CourtListener repository](https://github.com/freelawprojectcourtlistener) and website app in particular.  You will also be able to build new or custom Vagrant boxes and contribute back to this freelawmachine repository.
 
-This repository and the steps supercede the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener [wiki])https://github.com/freelawproject/courtlistener/wiki).  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
+This repository and the steps supercede the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener [wiki](https://github.com/freelawproject/courtlistener/wiki).  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
 
 ## Step 1:  Install prerequisites
 
