@@ -38,7 +38,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
 
   For the password, enter 'vagrant'.
 
-6. If you haven't used the machine yet, you'll need to do some basic CourtListener provisioning steps that currently aren't handled (yet) by our Vagrant provisioning scripts.
+6. If you haven't used the machine yet, you'll need to do some basic CourtListener provisioning steps that currently aren't handled (yet) by our Vagrant provisioning scripts.  Run the following commands in the terminal:
 
   ``` bash
   cd /var/www/courtlistener
@@ -48,7 +48,16 @@ Install the following.  Use a high-speed connection.  (These components are larg
   ./manage.py changepassword admin  #to set the password for the Django admin user
   ```
 
-7. Other commands that may be useful:
+7. Run the following commands in the terminal to get the latest schema file information for solr:
+
+``` bash
+cd /opt/solr-cores/recap/conf
+sudo service solr stop
+curl https://raw.githubusercontent.com/freelawproject/courtlistener/master/Solr/conf/recap_schema.xml --Output schema.xml
+sudo service solr start
+```
+
+8. Other commands that may be useful within the /var/www/courtlistener directory:
 
 ``` bash
 ./manage.py shell  #Opens a python shell with django stuff nicely imported.
@@ -99,7 +108,7 @@ You can inspect the Solr index cores directly using your browser:
 
 ## Using your browser's RECAP extension with your local CourtListener website
 
-1. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the recap user.
+1. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the "admin" user.
 
 2. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000");`.)
 
