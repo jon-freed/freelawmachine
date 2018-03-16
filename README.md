@@ -57,14 +57,12 @@ curl https://raw.githubusercontent.com/freelawproject/courtlistener/master/Solr/
 sudo service solr start
 ```
 
-8. Other commands that may be useful within the /var/www/courtlistener directory:
+8. Other commands that may be useful within the `/var/www/courtlistener` directory:
 
 ``` bash
 ./manage.py shell  #Opens a python shell with django stuff nicely imported.
 ./manage.py dbshell  #Opens a postgres shell, handling password stuff for you.
 ```
-
-
 
 ##  Step 3:  Start CourtListener
 
