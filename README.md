@@ -46,6 +46,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
   pip install -U -r requirements.txt
   ./manage.py migrate
   ./manage.py syncdb #to create the admin user
+  ./manage.py changepassword admin  #to set the password for the Django admin user
   ```
 
 ##  Step 3:  Start CourtListener
@@ -60,6 +61,8 @@ _For more details on why this is, check out this StackOverflow
 [post](http://stackoverflow.com/questions/1621457/about-ip-0-0-0-0-in-django)._
 
 Fire up your browser (on your local machine!), navigate to: [http://localhost:8000](http://localhost:8000), and confirm you've got a local instance that looks like [courtlistener.com](https://www.courtlistener.com/).
+
+You can access the administrative interface at [http://localhost:8000/admin](http://localhost:8000/admin) and with the username "admin" and the password you set above.
 
 ## Step 4:  Scrape some court opinions!
 
@@ -88,11 +91,19 @@ You should now have some results on the landing page as well as fully searchable
 opinions!
 
 You can inspect the Solr index cores directly using your browser:
-[http://localhost:8999/solr/#/](http://localhost:8999/solr/#/)
+[http://localhost:8983/solr/#/](http://localhost:8983/solr/#/)
+
+## Using your browsers RECAP extension with your local CourtListener website
+
+1. Go to [http://localhost:8000/admin/auth/user/1/](http://localhost:8000/admin/auth/user/1/), scroll the bottom, and copy the value for the token Key.
+
+2. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000"`.)
+
+3.  Go to a PACER docket page and your RECAP extension will add its content to your local CourtListener website.
 
 ## Modifying your local CourtListener website and contributing back to its repository
 
-You should not have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute you changes back to its repository:
+You should now have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute you changes back to its repository:
 
 1.  On GitHub, fork the freelawproject/courtlistener repository into your own account.
 2.  Initiate git for your local CourtListener folder, and set its remote to be equal to your fork.  (You may want to do a branch.)
