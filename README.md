@@ -103,9 +103,9 @@ opinions!
 You can inspect the Solr index cores directly using your browser:
 [http://localhost:8983/solr/#/](http://localhost:8983/solr/#/)
 
-## Using your browsers RECAP extension with your local CourtListener website
+## Using your browser's RECAP extension with your local CourtListener website
 
-1. Go to [http://localhost:8000/admin/auth/user/1/](http://localhost:8000/admin/auth/user/1/), scroll the bottom, and copy the value for the token Key.
+1. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the admin user.
 
 2. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000");`.)
 
