@@ -115,10 +115,14 @@ You can inspect the Solr index cores directly using your browser:
 You should now have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute you changes back to its repository:
 
 1.  On GitHub, fork the freelawproject/courtlistener repository into your own account.
-2.  Initiate git for your local CourtListener folder, and set its remote to be equal to your fork.  (You may want to do a branch.)
-3.  Modify your local CourtListener instance.
-4.  Push your changes up to your fork on GitHub.
-5.  Submit a pull request to the main freelawproject/courtlistener repository.
+2.  Create a branch for the work you want to do.
+3.  Use git (or a git client, e.g. GitHub Desktop) to clone your repository down into your local CourtListener folder and then, locally, select your new branch as the active branch.
+3.  Modify your local CourtListener instance.  Commit your changes as often as desired.
+4.  Periodically push your changes up to your fork and branch on GitHub.  (In essence, this backs up your local hard work to your storage space in your GitHub account.)
+5.  When you are done with your branch and you have tested your changes, then on GitHub submit a pull request up to your master branch.
+6.  On GitHub, accept that pull request within your master branch while squashing all your branch's commits into one.
+7.  Submit a pull request to the main freelawproject/courtlistener repository.
+8.  Patiently wait for your pull request to be reviewed, and patiently work with any requests from for changes to what you have proposed.  Ultimately, please be aware that your pull request may be rejected as a normal part of that process of reviewing and revising your proposed change.  Also, proposed changes that do not align with the Free Law Project's current vision and direction may not be accepted, but if this happens, you are certainly free to continue developing within your fork.)
 
 ## Working with and contributing to the FreeLawMachine repository
 
