@@ -49,6 +49,15 @@ Install the following.  Use a high-speed connection.  (These components are larg
   ./manage.py changepassword admin  #to set the password for the Django admin user
   ```
 
+7. Other commands that may be useful:
+
+``` bash
+./manage.py shell  #Opens a python shell with django stuff nicely imported.
+./manage.py dbshell  #Opens a postgres shell, handling password stuff for you.
+```
+
+
+
 ##  Step 3:  Start CourtListener
 
 From within the `/var/www/courtlistener` directory, simply use the [Django](https://www.djangoproject.com/)'s manage scripts as follows to launch the app. Make sure you pay close attention to adding the IP address and port number so it plays nice with Vagrant's NAT networking and the box's network adapters.
