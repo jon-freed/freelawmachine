@@ -106,11 +106,15 @@ You can inspect the Solr index cores directly using your browser:
 
 ## Using your browser's RECAP extension with your local CourtListener website
 
-1. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the "admin" user.
+To use your own browser's RECAP extension with your local CL site:
 
-2. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000");`.)
+1. Use the above `runserver` command to start the site.
 
-3.  Go to a PACER docket page and your RECAP extension will add its content to your local CourtListener website.
+2. Go to [http://localhost:8000/admin/authtoken/token/](http://localhost:8000/admin/authtoken/token/) and copy the token for the "admin" user.
+
+3. Edit your RECAP extension to use that token value and to use the protocol, host, and port of http://localhost:8000 instead of https://www.courtlistener.com.  (To do so in Chrome, go to chrome://extensions/, click on the RECAP extension's *background page* link, open Chrome Developer Tools for that page, open the Sources tab, open the "utils.js" file and go to the $.ajaxSetup beforeSend code.  Change the token there to be what you copied.  Add a line to set `settings.url = settings.url.replace("https://www.courtlistener.com","http://localhost:8000");`.)
+
+4.  Go to a PACER docket page and your RECAP extension will add its content to your local CourtListener website.
 
 ## Modifying your local CourtListener website and contributing back to its repository
 
