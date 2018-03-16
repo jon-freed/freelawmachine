@@ -54,6 +54,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
 From within the `/var/www/courtlistener` directory, simply use the [Django](https://www.djangoproject.com/)'s manage scripts as follows to launch the app. Make sure you pay close attention to adding the IP address and port number so it plays nice with Vagrant's NAT networking and the box's network adapters.
 
 ```bash
+sudo service solr start
 ./manage.py runserver 0.0.0.0:8000
 ```
 
