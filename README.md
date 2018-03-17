@@ -3,9 +3,9 @@ Free Law (Virtual) Machine v2.1.0
 
 Want to help develop Free Law Project functionality?
 
-Use this repository and the steps below to build your own virtual machine and ready-to-run development environment for the [Free Law Project](https://github.com/freelawproject), and the [CourtListener repository](https://github.com/freelawprojectcourtlistener) and website app in particular.  You will also be able to build new or custom Vagrant boxes and contribute back to this freelawmachine repository.
+Follow the steps below to build a development environment for the [Free Law Project](https://github.com/freelawproject) components like the [CourtListener repository](https://github.com/freelawprojectcourtlistener) website.  You will also be able to build new or custom Vagrant boxes and contribute back to this freelawmachine repository.
 
-This repository and the steps are an alternative to the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener [wiki](https://github.com/freelawproject/courtlistener/wiki).  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
+This repository and the steps supercede the manual process [described](https://github.com/freelawproject/courtlistener/wiki/Installing-CourtListener-on-Ubuntu-Linux) in the CourtListener [wiki](https://github.com/freelawproject/courtlistener/wiki).  They are intended to make the creation of a dev environment about as easy as a `vagrant up` command.
 
 ## Step 1:  Install prerequisites
 
@@ -48,16 +48,7 @@ Install the following.  Use a high-speed connection.  (These components are larg
   ./manage.py changepassword admin  #to set the password for the Django admin user
   ```
 
-7. Run the following commands in the terminal to get the latest recap schema file information for solr:
-
-``` bash
-cd /opt/solr-cores/recap/conf
-sudo service solr stop
-curl https://raw.githubusercontent.com/freelawproject/courtlistener/master/Solr/conf/recap_schema.xml --Output schema.xml
-sudo service solr start
-```
-
-8. Other commands that may be useful within the `/var/www/courtlistener` directory:
+7. Other commands that may be useful within the `/var/www/courtlistener` directory:
 
 ``` bash
 ./manage.py shell  #Opens a python shell with django stuff nicely imported.
@@ -103,6 +94,8 @@ opinions!
 
 You can inspect the Solr index cores directly using your browser:
 [http://localhost:8983/solr/#/](http://localhost:8983/solr/#/)
+
+NOTE:  If you encounter solr errors when adding data, see freelawmachine issue #[28](https://github.com/freelawproject/freelawmachine/issues/28).
 
 ## Modifying your local CourtListener website and contributing back to its repository
 
