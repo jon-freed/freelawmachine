@@ -99,7 +99,7 @@ NOTE:  If you encounter solr errors when adding data, see freelawmachine issue #
 
 ## Modifying your local CourtListener website and contributing back to its repository
 
-You should now have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute your changes back to its repository, follow the [GitHub Flow](https://guides.github.com/introduction/flow/).  *(Fork [CourtListener](https://github.com/freelawproject/courtlistener).  In your repo, create a branch.  Clone to your local CL folder.  Select the branch.  Modify CL.  Commit and push up your GitHub repo.  Submit pull request to your master branch.  Accept while squashing your commits.  Submit pull request back to main CL repository.  Changes that do not align with the Free Law Project's direction may not be accepted, but you can always continue developing within your fork.)*
+You should now have a working local instance of the CourtListener website.  You should also have a copy of the CourtListener repository as a sub-folder.  To modify it and contribute your changes back to its repository, follow the [GitHub Flow](https://guides.github.com/introduction/flow/).
 
 ## Working with and contributing to the FreeLawMachine repository
 
